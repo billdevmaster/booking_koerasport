@@ -11,6 +11,7 @@ use App\Models\LocationPesuboxs;
 use App\Models\Orders;
 use App\Models\Bookings;
 use App\Models\Services;
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BookIdMail;
 // use Illuminate\Support\Facades\Input;
