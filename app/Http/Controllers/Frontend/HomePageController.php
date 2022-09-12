@@ -98,7 +98,7 @@ class HomePageController extends Controller
             
             Mail::to($booking->email)->send(new BookIdMail($email_data));
 
-            $admin_users = User::where("role", "A")->where("need_notification", 1)->where_not_null('notification_email')->get();
+            $admin_users = User::where("role", "A")->where("need_notification", 1)->whereNotNull('notification_email')->get();
             foreach($admin_users as $user) {
                 Mail::to($user->notification_email)->send(new BookIdMail($email_data));
             }
